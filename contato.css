@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    /* background-color: black; */
+    box-sizing: border-box;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+}
+
+header{
+    background-color: #000;
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav{
+    width: 60%;
+}
+
+
+ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+li{
+    list-style: none;
+    color: aliceblue;
+    text-align: center;
+    cursor: pointer;
+    font-size: 19px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    transition: .5s;
+}
+
+li:hover{
+    color: #D21617;
+}
+
+#logo{
+    width: 150px;
+    height: auto;
+    border-image: fill;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 100px;
+    border-color: rgba(210, 22, 23, 0.5);
+}
+
+.container:after{
+    background-color: #000;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://i.blogs.es/638a6a/the-batman-movie-review/450_1000.jpg) no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(30px);
+}
+
+.contact-box{
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #000;
+    border-radius: 20px;
+    box-shadow: 0px 5px 19px 0px #D21617;
+}
+
+.esquerda{
+    height: 100%;
+    background: url(https://d2d7ho1ae66ldi.cloudfront.net/ArquivoNoticias/f7c625e7-6d91-11ec-aa6e-9587410378a2/the-batman-guia.jpg) no-repeat center;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.direita{
+    padding: 25px 40px;
+    border-radius: 20px;
+    background: url(https://wallpaperaccess.com/full/2637500.jpg) no-repeat center;
+    background-size: auto;
+}
+
+h2{
+    color: #D21617;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+h2:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: crimson;
+}
+
+.campo{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 2px solid #D21617;
+    background-color: rgba(230, 230, 230, 0.9);
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+}
+
+.campo:hover{
+    background-color: #D21617;
+}
+
+.campo:focus{
+    background-color: #D21617;
+    border: 2px solid rgba(230, 230, 230, 0.9);
+}
+
+.area-de-texto{
+    min-height: 150px;
+    min-width: 320px;
+    max-height: 150px;
+    max-width: 320px;
+    margin-bottom: 15px;
+}
+
+.btn{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    background-color: rgba(230, 230, 230, 0.9);
+    outline: none;
+    border: none;
+    transition: .3s;
+}
+
+.btn:hover{
+    background-color: #D21617;
+}
+
+footer{
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+span{
+    color: #fff;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.footer-navigation{
+    display: none;
+}
+
+.footer-list{ /*já que a div pai vai desaparecer, ela também vai*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 768px){
+    .footer-navigation{
+        display: block;
+    }
+    
+    nav{
+        display: none
+    }
+
+    .contact-box{
+        grid-template-columns: 1fr;
+    }
+
+    .esquerda{
+        height: 200px;
+    }
+}

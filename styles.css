@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 0, 0);
+    list-style-type: none;
+    text-decoration: none;
+}
+
+header{
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav{
+    width: 60%
+}
+
+ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+li{
+    list-style: none;
+    color: aliceblue;
+    cursor: pointer; /*para ficar a mãozinha*/
+    font-size: 19px;
+    transition: .5s;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+li:hover{
+    color: #D21617;
+}
+
+#logo{
+    width: 150px;
+    height: auto;
+    border-image: fill;
+}
+
+#banner{
+    background-image: url(https://i.ytimg.com/vi/Cwcinb2OxUo/maxresdefault.jpg);
+    background-position: 50% 50%;
+    background-size: cover; /*ocupar todo o espaço da div*/
+    background-repeat: no-repeat;
+    padding-bottom: 800px ;
+    width: 100%;
+    height: 200px;
+}
+
+#trailer-conteiner{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-left: 400px;
+}
+
+.trailer{
+    width: 50%;
+}
+
+#sinopse{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.description{
+    color: #fff;
+    font-size: 19px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    width: 70%;
+}
+
+.button{
+    width: 200px;
+    height: 60px;
+    background-color: #D21617;
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer; /*para quando passar em cima, o cursor ficar com a mãozinha*/
+    transition: .8s;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-weight: bold; /*negrito*/
+    border: none;
+    outline: none; /*para o botão nao ficar com a bordinha preta quando clicar*/
+    margin-top: 25px; /*distância do texto em cima*/
+}
+
+.button:hover{
+    background-color: #fff; /*cor do botão*/
+    color: #000; /*cor da letra*/
+}
+
+/* body{
+    height: 150vh;    width- wh
+} */
+
+.actor-cards-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.cards-content{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 40px;
+}
+
+.card{ /*vai estilizar todos os cards*/
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /*já que é vertical, os nomes vao pro final da 
+    coluna para as imagens ficarem em cima*/
+    padding: 0 0 20px 10px;
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.card:hover{
+    transform: scale(1.02); /*transformar nessa escala quando passar por cima*/
+}
+
+.banner1{
+    background-image: url(https://www.rbsdirect.com.br/imagesrc/26157815.jpg?w=700);
+}
+.banner2{
+    background-image: url(https://s2.glbimg.com/zYlZbxKkPK-hKo3pi460fM0RL2w=/smart/e.glbimg.com/og/ed/f/original/2022/03/14/thebatman.jpg);
+}
+.banner3{
+    background-image: url(https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/02/The-Batman-Jeffrey-Wright-Commissioner-Gordon-Challenge.jpg);
+}
+
+footer{
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+span{
+    color: #fff;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.footer-navigation{
+    display: none;
+}
+
+.footer-list{ /*já que a div pai vai desaparecer, ela também vai*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(max-width: 768px){
+    .footer-navigation{
+        display: block;
+    }
+
+    nav{
+        display: none;
+    }
+
+    #banner{
+        background-position: 11%;
+        background-size: auto;
+    }
+
+    #trailer-container{
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content{
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5px;
+    }
+
+    .trailer{
+        width: 100%;
+    }
+
+    #sinopse{
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .description{
+        width: 100%;
+    }
+
+    .button{
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .cards-content{
+        grid-template-columns: 1fr; /*antes eram 3 colunas*/
+        margin-top: 150px; /*pra não ficar em cima do botão*/
+    }
+}
